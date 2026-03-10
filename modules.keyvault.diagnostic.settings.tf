@@ -7,7 +7,7 @@
 module "mod_diagnostic_settings_key_vault" {
   count   = length(var.logs_destinations_ids) > 0 ? 1 : 0
   source  = "azurenoops/overlays-diagnostic-settings/azurerm"
-  version = "1.0.0"
+  version = "1.5.0"
 
   # Resource Group, location, VNet and Subnet details
   location           = var.location
