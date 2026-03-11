@@ -43,7 +43,7 @@ provider "azurerm" {
 }
 
 module "mod_key_vault" {
-  source  = "azurenoops/overlays-key-vault/azurerm"
+  source  = "POps-Rox/tf-az-overlays-key-vault/azurerm"
   version = "x.x.x"
 
   # By default, this module will create a resource group and 
@@ -123,7 +123,7 @@ Configure Azure Key Vault keys to store cryptographic keys used by cloud applica
 
 ```hcl
 module "key-vault" {
-  source  = "azurenoops/overlays-key-vault/azurerm"
+  source  = "POps-Rox/tf-az-overlays-key-vault/azurerm"
   version = "x.x.x"
 
   # .... omitted
@@ -150,7 +150,7 @@ Configure Azure Key Vault secrets to store sensitive information such as passwor
 
 ```hcl
 module "key-vault" {
-  source  = "azurenoops/overlays-key-vault/azurerm"
+  source  = "POps-Rox/tf-az-overlays-key-vault/azurerm"
   version = "x.x.x"
 
   # .... omitted
@@ -177,7 +177,7 @@ Default action is set to `Allow` when no network rules matched. A `virtual_netwo
 
 ```hcl
 module "key-vault" {
-  source  = "azurenoops/overlays-key-vault/azurerm"
+  source  = "POps-Rox/tf-az-overlays-key-vault/azurerm"
   version = "x.x.x"
 
   # .... omitted
@@ -208,7 +208,7 @@ By default, this feature not enabled on this module. To create private link with
 
 ```terraform
 module "key-vault" {
-  source  = "azurenoops/overlays-key-vault/azurerm"
+  source  = "POps-Rox/tf-az-overlays-key-vault/azurerm"
   version = "x.x.x"
 
   # .... omitted
@@ -230,7 +230,7 @@ If you want to use eixsting VNet and Subnet to create a private endpoints, set a
 
 ```terraform
 module "key-vault" {
-  source  = "azurenoops/overlays-key-vault/azurerm"
+  source  = "POps-Rox/tf-az-overlays-key-vault/azurerm"
   version = "x.x.x"
 
   # .... omitted
