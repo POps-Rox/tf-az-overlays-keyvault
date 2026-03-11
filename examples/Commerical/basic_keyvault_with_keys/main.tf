@@ -2,7 +2,7 @@
 # Licensed under the MIT License.
 
 module "mod_key_vault" {
-  #source  = "azurenoops/overlays-key-vault/azurerm"
+  #source  = "github.com/POps-Rox/tf-az-overlays-keyvault"
   #version = "x.x.x"
   source = "../../.."
 

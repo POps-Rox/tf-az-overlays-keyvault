@@ -5,7 +5,7 @@
 # Azure Region Lookup
 #----------------------------------------------------------
 module "mod_azure_region_lookup" {
-  source  = "azurenoops/overlays-azregions-lookup/azurerm"
+  source  = "github.com/POps-Rox/tf-az-overlays-azregionslookup"
   version = "~> 1.0.0"
 
   azure_region = "eastus"
@@ -22,7 +22,7 @@ module "mod_key_vault" {
     azurerm_virtual_network.kv_vnet,
     azurerm_subnet.kv_subnet,
   ]
-  #source  = "azurenoops/overlays-key-vault/azurerm"
+  #source  = "github.com/POps-Rox/tf-az-overlays-keyvault"
   #version = "x.x.x"
   source = "../../.."
 

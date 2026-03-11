@@ -5,7 +5,7 @@ module "mod_key_vault" {
   depends_on = [
     azurerm_resource_group.kv_rg,
   ]
-  #source  = "azurenoops/overlays-key-vault/azurerm"
+  #source  = "github.com/POps-Rox/tf-az-overlays-keyvault"
   #version = "x.x.x"
   source = "../../.."
 
