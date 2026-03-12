@@ -2,12 +2,13 @@
 # Licensed under the MIT License.
 
 module "mod_key_vault" {
-  depends_on = [
-    azurerm_resource_group.kv_rg,
-  ]
   #source  = "github.com/POps-Rox/tf-az-overlays-keyvault"
   #version = "x.x.x"
   source = "../../.."
+  providers = {
+    azurerm     = azurerm
+    azurerm.hub = azurerm.hub
+  }
 
   # By default, this module will create a resource group and 
   # provide a name for an existing resource group. If you wish 

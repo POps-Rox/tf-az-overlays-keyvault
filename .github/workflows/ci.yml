@@ -41,9 +41,11 @@ jobs:
 
       - name: Terraform Init
         run: terraform init -backend=false
+        working-directory: examples/Commerical/basic_keyvault
 
       - name: Terraform Validate
         run: terraform validate
+        working-directory: examples/Commerical/basic_keyvault
 
   tflint:
     name: "🔍 TFLint"
