@@ -13,6 +13,7 @@ module "mod_diagnostic_settings_key_vault" {
   deploy_environment = var.deploy_environment
   environment        = var.environment
   org_name           = var.org_name
+  workload_name      = var.workload_name
 
   resource_id           = azurerm_key_vault.this.0.id
   logs_destinations_ids = var.logs_destinations_ids
