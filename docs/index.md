@@ -8,9 +8,9 @@
 
 # Azure Key Vault Overlay Terraform Module
 
-[![Changelog](https://img.shields.io/badge/changelog-release-green.svg)](CHANGELOG.md) [![MIT License](https://img.shields.io/badge/license-MIT-orange.svg)](LICENSE) [![TF Registry](https://img.shields.io/badge/terraform-registry-blue.svg)](https://registry.terraform.io/modules/azurenoops/overlays-key-vault/azurerm/)
+[![Changelog](https://img.shields.io/badge/changelog-release-green.svg)](CHANGELOG.md) [![MIT License](https://img.shields.io/badge/license-MIT-orange.svg)](LICENSE) [![TF Registry](https://img.shields.io/badge/terraform-registry-blue.svg)](https://registry.terraform.io/modules/POps-Rox/overlays-key-vault/azurerm/)
 
-This Terraform Module creates a Key Vault also adds required access policies for azure AD users, groups and azure AD service principals. This also enables private endpoint and sends all logs to log analytic workspace or storage. This module can be used with an [SCCA compliant Network](https://registry.terraform.io/modules/azurenoops/overlays-management-hub/azurerm/latest).
+This Terraform Module creates a Key Vault also adds required access policies for azure AD users, groups and azure AD service principals. This also enables private endpoint and sends all logs to log analytic workspace or storage. This module can be used with an [SCCA compliant Network](https://registry.terraform.io/modules/POps-Rox/overlays-management-hub/azurerm/latest).
 
 ## SCCA Compliance
 
@@ -256,14 +256,14 @@ For more details: [Integrate Key Vault with Azure Private Link](https://docs.mic
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.9 |
-| <a name="requirement_azurenoopsutils"></a> [azurenoopsutils](#requirement\_azurenoopsutils) | ~> 1.0.4 |
+| <a name="requirement_popsrox-utils"></a> [popsrox-utils](#requirement\_popsrox-utils) | ~> 1.0.4 |
 | <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | ~> 3.116 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_azurenoopsutils"></a> [azurenoopsutils](#provider\_azurenoopsutils) | ~> 1.0.4 |
+| <a name="provider_popsrox-utils"></a> [popsrox-utils](#provider\_popsrox-utils) | ~> 1.0.4 |
 | <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | ~> 3.116 |
 | <a name="provider_azurerm.hub"></a> [azurerm.hub](#provider\_azurerm.hub) | ~> 3.116 |
 
@@ -271,8 +271,8 @@ For more details: [Integrate Key Vault with Azure Private Link](https://docs.mic
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_mod_azure_region_lookup"></a> [mod\_azure\_region\_lookup](#module\_mod\_azure\_region\_lookup) | azurenoops/overlays-azregions-lookup/azurerm | ~> 1.0.0 |
-| <a name="module_mod_key_vault_rg"></a> [mod\_key\_vault\_rg](#module\_mod\_key\_vault\_rg) | azurenoops/overlays-resource-group/azurerm | ~> 1.0.1 |
+| <a name="module_mod_azure_region_lookup"></a> [mod\_azure\_region\_lookup](#module\_mod\_azure\_region\_lookup) | POps-Rox/overlays-azregions-lookup/azurerm | ~> 1.0.0 |
+| <a name="module_mod_key_vault_rg"></a> [mod\_key\_vault\_rg](#module\_mod\_key\_vault\_rg) | POps-Rox/overlays-resource-group/azurerm | ~> 1.0.1 |
 
 ## Resources
 
@@ -295,9 +295,9 @@ For more details: [Integrate Key Vault with Azure Private Link](https://docs.mic
 | [azurerm_role_assignment.rbac_keyvault_administrator](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/role_assignment) | resource |
 | [azurerm_role_assignment.rbac_keyvault_reader](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/role_assignment) | resource |
 | [azurerm_role_assignment.rbac_keyvault_secrets_users](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/role_assignment) | resource |
-| [azurenoopsutils_resource_name.keyvault](https://registry.terraform.io/providers/azurenoops/azurenoopsutils/latest/docs/data-sources/resource_name) | data source |
-| [azurenoopsutils_resource_name.keyvault_dns_a_record](https://registry.terraform.io/providers/azurenoops/azurenoopsutils/latest/docs/data-sources/resource_name) | data source |
-| [azurenoopsutils_resource_name.keyvault_hsm](https://registry.terraform.io/providers/azurenoops/azurenoopsutils/latest/docs/data-sources/resource_name) | data source |
+| [popsrox_resource_name.keyvault](https://registry.terraform.io/providers/POps-Rox/azutils/latest/docs/data-sources/resource_name) | data source |
+| [popsrox_resource_name.keyvault_dns_a_record](https://registry.terraform.io/providers/POps-Rox/azutils/latest/docs/data-sources/resource_name) | data source |
+| [popsrox_resource_name.keyvault_hsm](https://registry.terraform.io/providers/POps-Rox/azutils/latest/docs/data-sources/resource_name) | data source |
 | [azurerm_client_config.current_config](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/client_config) | data source |
 | [azurerm_private_endpoint_connection.pip](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/private_endpoint_connection) | data source |
 | [azurerm_resource_group.rgrp](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/resource_group) | data source |
