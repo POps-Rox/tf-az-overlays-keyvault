@@ -1,7 +1,7 @@
 # Copyright (c) Microsoft Corporation.
 # Licensed under the MIT License.
 
-data "popsrox_resource_name" "keyvault" {
+data "popsrox_utils_resource_name" "keyvault" {
   name          = var.workload_name
   resource_type = "azurerm_key_vault"
   prefixes      = [var.org_name, module.mod_azure_region_lookup.location_short]
@@ -11,7 +11,7 @@ data "popsrox_resource_name" "keyvault" {
   separator     = "-"
 }
 
-data "popsrox_resource_name" "keyvault_hsm" {
+data "popsrox_utils_resource_name" "keyvault_hsm" {
   name          = var.workload_name
   resource_type = "azurerm_key_vault"
   prefixes      = [var.org_name, module.mod_azure_region_lookup.location_short]
@@ -21,7 +21,7 @@ data "popsrox_resource_name" "keyvault_hsm" {
   separator     = "-"
 }
 
-data "popsrox_resource_name" "keyvault_dns_a_record" {
+data "popsrox_utils_resource_name" "keyvault_dns_a_record" {
   name          = var.workload_name
   resource_type = "azurerm_private_dns_a_record"
   prefixes      = [var.org_name, module.mod_azure_region_lookup.location_short]
